@@ -1,0 +1,30 @@
+version: "3.7"
+
+services:
+  data-refinery:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        http_proxy:
+        https_proxy:
+        no_proxy:
+    image: art.sec.samsung.net/seda-fw_docker/data_refinery:${WORKER_VERSION:-latest}
+    tty: true
+    stdin_open: true
+    init: true
+    logging:
+      options:
+        max-size: "10M"
+        max-file: "3"
+    volumes:
+      - /var/log/di/di/${COMPOSE_PROJECT_NAME:-prod}:/var/log/di/di
+      - /srv/di/di/${COMPOSE_PROJECT_NAME:-prod}:/root/data_refinery/config
+    networks:
+      - data-di
+    env_file:
+      - ${PWD}/.env
+
+networks:
+  data-refinery:
+    driver: bridge

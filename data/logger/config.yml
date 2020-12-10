@@ -1,0 +1,23 @@
+---
+core:
+  logging:
+    version: 1
+    formatters:
+      formatter:
+        format: "[%(asctime)s] [%(levelname)s] [%(name)s]: %(message)s"
+    handlers:
+      console:
+        class: "logging.StreamHandler"
+        level: "INFO"
+        formatter: "formatter"
+        stream: "ext://sys.stderr"
+      file:
+        class: "logging.handlers.RotatingFileHandler"
+        level: "INFO"
+        formatter: "formatter"
+        filename: "/tmp/di/di/di.di.log"
+        maxBytes: 5242880
+        backupCount: 3
+    root:
+      level: "INFO"
+      handlers: ["console", "file"]

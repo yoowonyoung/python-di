@@ -1,0 +1,6 @@
+{
+  "LOG_PATH": "/tmp/di/module",
+  "LOG_LIMIT": true,
+  "DEBUG": false,
+  "CONSOLE_LOG": true
+}

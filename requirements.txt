@@ -1,0 +1,5 @@
+peewee
+pyyaml
+dependency-injector
+PyMySQL
+mongoengine

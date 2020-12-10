@@ -1,0 +1,23 @@
+---
+info:
+  name: DI Example
+  description: Python DI Example
+  version: 0.0.1
+  author:
+  author_email:
+gateways:
+  mysql:
+    database: MYSQL_DATABASE_PLACEHOLDER
+    host: MYSQL_HOST_PLACEHOLDER
+    port: 3306
+    username: MYSQL_USERNAME_PLACEHOLDER
+    password: MYSQL_PASSWORD_PLACEHOLDER
+  mongodb:
+    database: MONGODB_DATABASE_PLACEHOLDER
+    host: MONGODB_HOST_PLACEHOLDER
+    port: 27017
+    username: MONGODB_USERNAME_PLACEHOLDER
+    password: MONGODB_PASSWORD_PLACEHOLDER
+
+services:
+  time_service:
