@@ -20,4 +20,4 @@ Set environment variable if you want to run script without credentials and serve
 
 Run script
 
-    python3 -m sedafw.refinery.xxx xxx 2020 9
+    python3 -m xxx.xxxx.xxx xxx 
